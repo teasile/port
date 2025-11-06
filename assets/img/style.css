@@ -1,0 +1,108 @@
+/* ===== RESET ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { height:100%; }
+body{
+  font-family:"Marcellus", sans-serif;
+  color:#e8f1f8;
+  background:#172938;
+  overflow-x:hidden;
+}
+
+/* ===== NAV ===== */
+header{
+  position:fixed; top:0; left:0; width:100%;
+  background:rgba(0,0,0,.30);
+  backdrop-filter:blur(8px);
+  padding:35px 80px;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+.navbar{ display:flex; justify-content:space-between; align-items:center; }
+.logo{ font-family:"Marcellus",serif; font-size:1.3rem; color:#eaf6ff; letter-spacing:.6px; }
+.nav-links{ list-style:none; display:flex; gap:30px; }
+.nav-links a{ font-family:"Quicksand",sans-serif; color:#eaf6ff; text-decoration:none; }
+.nav-links a:hover{ color:#a8d5e2; }
+
+/* ===== HERO ===== */
+.hero{
+  position:relative; height:100vh;
+  display:flex; flex-direction:column; justify-content:center; align-items:center; gap:14px;
+  background-image:url("assets/img/Poz1.png"); /* pozadina #1 */
+  background-size:cover; background-repeat:no-repeat; background-position:center;
+}
+.hero h1{ font-size:3.6rem; color:#eaf6ff; margin:0; text-shadow:0 4px 12px rgba(0,0,0,.4); }
+.hero h3{ font-size:1.8rem; color:#cfe7f3; margin:0; }
+
+/* ===== OPŠTE SEKCIJE ===== */
+.section{ position:relative; padding:120px 20px; }
+.container{ max-width:1100px; margin:0 auto; }
+.section h2{ text-align:center; font-size:2.2rem; color:#a9d6e5; margin-bottom:12px; }
+.section p{ color:#d8e6ef; }
+
+/* ===== O MENI ===== */
+.about{
+  background-image:url("assets/img/Poz2.png");  /* pozadina #2 */
+  background-size:cover; background-repeat:no-repeat; background-position:center;
+  padding:100px 0;
+}
+.about-wrap{
+  display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center;
+}
+.about-text h2{ color:#a9d6e5; font-size:2.2rem; margin-bottom:10px; }
+.about-text p{ line-height:1.6; margin-bottom:14px; }
+.about-cta{ display:flex; gap:12px; margin-top:10px; }
+.btn{ display:inline-block; background:#a9d6e5; color:#0e1821; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:700; }
+.btn-ghost{ background:transparent; color:#a9d6e5; border:1px solid #a9d6e5; }
+.btn-ghost:hover{ background:rgba(169,214,229,.12); }
+
+.about-media img{
+  width:450px; height:auto; border-radius:14px;
+  filter:drop-shadow(0 8px 20px rgba(0,0,0,.4));
+  opacity:.95;
+}
+
+/* ===== EDUKACIJA (TIMELINE) ===== */
+#timeline{ text-align:center; margin:80px 0; }
+#timeline h2{ color:#a9d6e5; font-size:2.2rem; margin-bottom:40px; }
+#timeline img{ width:80%; max-width:1000px; height:auto; opacity:.95; display:block; margin:0 auto; }
+.cv-link{
+  display:inline-block; margin-top:20px; padding:12px 24px;
+  font-family:"Quicksand",sans-serif; color:#eaf6ff; text-decoration:none;
+  background:rgba(169,214,229,.1); border:2px solid rgba(234,246,255,.3); border-radius:10px;
+}
+
+/* ===== RADOVI ===== */
+
+.work-block{ margin-bottom:100px; }
+.work-content{
+  display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:30px;
+  background:rgba(255,255,255,.05); border-radius:16px; padding:40px; box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+.work-left img{ width:280px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,.25); }
+.work-right{ flex:1 1 250px; text-align:left; }
+.work-right h3{ color:#a9d6e5; font-size:1.8rem; margin-bottom:10px; }
+.work-center{ display:flex; flex-direction:column; gap:22px; }
+.top-row, .bottom-row{ display:flex; justify-content:center; gap:22px; }
+.work-center img{ width:150px; border-radius:10px; }
+
+/* resp */
+@media (max-width:900px){
+  .about-wrap{ grid-template-columns:1fr; }
+  .about-media{ order:2; }
+  .work-content{ flex-direction:column; align-items:center; text-align:center; }
+  .work-left img{ width:220px; }
+  .work-center img{ width:120px; }
+}
+
+/* ===== KONTAKT ===== */
+.contact{
+  background-image:url("assets/img/Poz3.png"); /* pozadina #3 */
+  background-size:cover; background-repeat:no-repeat; background-position:center;
+  padding:100px 0;
+}
+.contact-wrap{ display:grid; grid-template-columns:.9fr 1.1fr; gap:40px; align-items:start; }
+.contact-card h2{ color:#a9d6e5; font-size:2.2rem; margin-bottom:8px; }
+.contact-list{ display:flex; flex-direction:column; gap:8px; margin:18px 0; }
+.contact-list a{ color:#cfe7f3; text-decoration:none; }
+.contact-list a:hover{ color:#a9d6e5; }
+.contact-media img{ width:100%; display:block; }
